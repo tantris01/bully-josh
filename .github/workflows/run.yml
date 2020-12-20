@@ -16,7 +16,7 @@ on:
 
 jobs:
   getads:
-    name: get ads
+    name: message josh
     runs-on: ubuntu-latest
     steps:
       
