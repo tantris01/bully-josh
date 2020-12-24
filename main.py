@@ -22,7 +22,7 @@ def obfuscate_quote():
     options.headless = True
     options.add_argument("--window-size=1920,1200")
 
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options,executable_path='bully-josh//chromedriver_win32//chromedriver.exe')
     driver.get(url)
 
     #getting html and finding all ads
