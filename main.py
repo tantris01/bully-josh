@@ -16,18 +16,19 @@ from sendgrid.helpers.mail import Mail
 # session.logout()
 
 def obfuscate_quote():
-    url = 'https://translate.google.com/'
+    url = 'https://www.translate.com/'
     #setting up headless chrome browser
     options = Options()
     options.headless = True
     options.add_argument("--window-size=1920,1200")
 
-    driver = webdriver.Chrome(options=options,executable_path='bully-josh//chromedriver_win32//chromedriver.exe')
+    driver = webdriver.Chrome(options=options)
     driver.get(url)
 
     #getting html and finding all ads
     soup = BeautifulSoup(driver.page_source,'html.parser')
-    print(soup)
+    inputs = soup.find_all('input')
+    print(inputs[0])
 
 obfuscate_quote()
 
