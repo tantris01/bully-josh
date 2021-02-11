@@ -16,7 +16,7 @@ from sendgrid.helpers.mail import Mail
 # session.logout()
 
 def obfuscate_quote():
-    url = 'https://www.translate.com/'
+    url = 'https://www.bing.com/translator'
     #setting up headless chrome browser
     options = Options()
     options.headless = True
@@ -28,7 +28,8 @@ def obfuscate_quote():
     #getting html and finding all ads
     soup = BeautifulSoup(driver.page_source,'html.parser')
     inputs = soup.find_all('input')
-    print(inputs[0])
+    for input_tag in inputs: 
+        print(input_tag)
 
 obfuscate_quote()
 
