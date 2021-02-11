@@ -6,7 +6,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 def obfuscate_quote():
-    url = 'https://www.bing.com/translator'
+    url = 'https://lingojam.com/PigLatinTranslator'
     #setting up headless chrome browser
     options = Options()
     options.headless = True
@@ -17,11 +17,18 @@ def obfuscate_quote():
 
     #getting html and finding all ads
     soup = BeautifulSoup(driver.page_source,'html.parser')
-    inputs = soup.find_all('input')
-    for input_tag in inputs: 
-        print(input_tag)
 
-obfuscate_quote()
+
+
+with open('beemovie.txt') as beetext:
+    lines = beetext.read().split('\n')
+    final_lines = []
+    for i in range(len(lines)):
+        if lines[i] != '' and lines[i] != '  ':
+            final_lines += [lines[i]]
+
+
+#obfuscate_quote()
 
 # def email():
 
