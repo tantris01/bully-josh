@@ -5,16 +5,6 @@ from os import environ
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-# # Log the user in
-# session = fbchat.Session.login(environ['EMAIL'], environ['PASSWORD'])
-
-
-# # Send a message to yourself
-# session.user.send_text("Hi me!")
-
-# # Log the user out
-# session.logout()
-
 def obfuscate_quote():
     url = 'https://www.bing.com/translator'
     #setting up headless chrome browser
